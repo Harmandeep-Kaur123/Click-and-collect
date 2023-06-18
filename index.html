@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online_Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="home">
+        <div class="container">
+            <div  class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="https://img.freepik.com/free-vector/detailed-click-collect-sign_23-2148779338.jpg?size=626&ext=jpg&ga=GA1.1.722275616.1686367207&semt=ais" width="100px"/>
+                    </a>
+                     </div>
+                <nav>
+                    <ul id="Menu_items">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="order.html">Orders</a></li>
+                        <!--<li><a href="">Contact</a></li>-->
+                        <li><a href="account.html">Account</a></li>
+                    </ul>
+                </nav>
+                <a href="cart.html">
+                    <img src="image/cart.png" width="30px" height="30px"/>
+                </a>
+                <img src="image/menu.png" class="menu-icon" onclick="show_menu()"/>
+            </div>
+            <div class="row">
+                <div class="row_text">
+                    <h1>Dress Well, <br> Stay Stylish With Us..</h1>
+                    <p>We make online shopping a breeze..</p>
+                    <br>
+                    <p>Shop Online & Save Time</p> 
+                    <a href="#scroll" class="button" id="explore">Explore ... </a>    
+                </div>
+                <div class="row_img">
+                    <img src="https://www.pngmart.com/files/11/Online-Portal-E-Commerce-PNG-Clipart.png" alt="background image"/>
+                </div> 
+            </div>
+        </div>
+    </div>
+<!-- ---------------  -->
+    <div class="categories" id="scroll">
+        <div class="container2">
+            <div class="row">
+                <div class="col" id="category1"> <img src="image/category-1.jpg"/></div>
+                <div id="hidden1" >Men's Wear<br> Available Clothes, Shoes,Watches <br> of different brands</div>
+                <div class="col"><img src="image/category-2.jpg"/></div>
+                <div class="col"><img src="image/category-3.jpg"/></div>
+            </div>
+        </div>    
+    </div>
+<!--Featured products-->
+    <div class="container2">
+        <h2 class="title_features">Featured Products</h2>
+        <div class="row">
+            <div class="col2">
+                <a href="productDetails.html"><img src="image/product-1.jpg"/></a>
+                <a href="productDetails.html"><h4>Red Printed T-shirt</h4></a>
+                <p>$40.00</p>
+                <div class="ratings">
+                    &#9733;&#9733;&#9733;&#9733;&#9734;
+                </div>
+            </div>
+            <div class="col2">
+                <img src="image/product-2.jpg"/>
+                <h4>HRX Black Shoes</h4>
+                <p>$60.00</p>
+                <div class="ratings">
+                    &#9733;&#9733;&#9733;&#9733;&#9734;
+                </div>
+            </div>
+            <div class="col2">
+                <img src="image/product-3.jpg"/>
+                <h4>Gray Jogger</h4>
+                <p>$65.00</p>
+                <div class="ratings">
+                    &#9733;&#9733;&#9733;&#9734;&#9734;
+                </div>
+            </div>
+            <div class="col2">
+                <img src="image/product-4.jpg"/>
+                <h4>Solid Blue T-shirt</h4>
+                <p>$50.00</p>
+                <div class="ratings">
+                    &#9733;&#9733;&#9733;&#9733;&#9734;
+                </div>
+            </div>
+        </div>
+        <h2 class="title_features">Latest Products</h2>
+        <div class="row">
+            <div class="col2">
+                <img src="image/product-5.jpg"/>
+                <h4>Gray Sneakers</h4>
+                <p>$40.00</p>
+                <div class="ratings">
+                    &#9733;&#9733;&#9733;&#9733;&#9734;
+                </div>
+            </div>
+            <div class="col2">
+                <img src="image/product-6.jpg"/>
+                <h4>Puma Black T-Shirt</h4>
+                <p>$60.00</p>
+                <div class="ratings">
+                    &#9733;&#9733;&#9733;&#9733;&#9734;
+                </div>
+            </div>
+            <div class="col2">
+                <img src="image/product-7.jpg"/>
+                <h4>HRX socks</h4>
+                <p>$65.00</p>
+                <div class="ratings">
+                    &#9733;&#9733;&#9733;&#9734;&#9734;
+                </div>
+            </div>
+            <div class="col2">
+                <img src="image/product-8.jpg"/>
+                <h4>Rossil Men Watch </h4>
+                <p>$50.00</p>
+                <div class="ratings">
+                    &#9733;&#9733;&#9733;&#9733;&#9734;
+                </div>
+            </div>
+            <div class="col2">
+                <img src="image/product-9.jpg"/>
+                <h4>Roadster Watch </h4>
+                <p>$40.00</p>
+                <div class="ratings">
+                    &#9733;&#9733;&#9733;&#9733;&#9734;
+                </div>
+            </div>
+            <div class="col2">
+                <img src="image/product-10.jpg"/>
+                <h4>HRX Black-Red Shoes</h4>
+                <p>$60.00</p>
+                <div class="ratings">
+                    &#9733;&#9733;&#9733;&#9733;&#9734;
+                </div>
+            </div>
+            <div class="col2">
+                <img src="image/product-11.jpg"/>
+                <h4>Casual Gray Shoes</h4>
+                <p>$65.00</p>
+                <div class="ratings">
+                    &#9733;&#9733;&#9733;&#9734;&#9734;
+                </div>
+            </div>
+            <div class="col2">
+                <img src="image/product-12.jpg"/>
+                <h4>Black Men Jogger </h4>
+                <p>$50.00</p>
+                <div class="ratings">
+                    &#9733;&#9733;&#9733;&#9733;&#9734;
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----------------- -->
+    <div class="offers">
+        <div class="container2">
+            <div class="row">
+                <div class="col"> <img src="image/exclusive.png" class="offers-img"/></div>
+                <div class="col">
+                    <p>
+                        Exclusively Available
+                        <br>
+                        <h1 style="font-weight: bolder;font-size: 50px;">Mi Smart Band </h1>
+                        <br>
+                        <small>The Smart Band with full-touch display with adjustable brightness.
+                            <br><br>
+                            Available in many colors.
+                            <br>
+                            <button class="button buybtn">Buy Now..</button>
+                            <div id="details" style="display: none; font-weight: bolder; ">
+                                <p>
+                                    Colors Available : Red , Orange
+                                    <br>
+                                    Price : $100.00
+                                    <br>
+                                    Order will be delivered within 3-4 days
+                                </p>
+                            </div>
+                        </small>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ----------  -->
+    <div class="test">
+        <div class="container2">
+            <div class="row">
+                <div class="col">
+                    <div class="quote">&#34;</div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus excepturi, consequuntur repellat soluta fugiat hic eligendi assumenda. Odit velit quibusdam provident, voluptates, doloribus sequi neque ex vitae illo reiciendis laboriosam.
+                    </p>
+                    <div class="ratings">
+                        &#9733;&#9733;&#9733;&#9734;&#9734;
+                    </div>
+                    <img src="https://thumbs.dreamstime.com/b/print-194754999.jpg"/>
+                    <h3>USER 1</h3>
+                </div>
+                <div class="col">
+                    <div class="quote">&#34;</div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus excepturi, consequuntur repellat soluta fugiat hic eligendi assumenda. Odit velit quibusdam provident, voluptates, doloribus sequi neque ex vitae illo reiciendis laboriosam.
+                    </p>
+                    <div class="ratings">
+                        &#9733;&#9733;&#9733;&#9734;&#9734;
+                    </div>
+                    <img src="https://th.bing.com/th/id/R.70ec64ca474f0b5e7dd95daed1721929?rik=G0PswkVWXVJn7w&riu=http%3a%2f%2fwattstruckleasing.com%2fwp-content%2fuploads%2f2020%2f11%2fuser-icon-male-person-symbol-profile-avatar-sign-vector-18991901.jpg&ehk=qPkqDfErRzYYdOckNUVMWNmFA6cVTGZwzA9752W4Jpg%3d&risl=&pid=ImgRaw&r=0"/>
+                    <h3>USER 2</h3>
+                </div>
+                <div class="col">
+                    <div class="quote">&#34;</div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus excepturi, consequuntur repellat soluta fugiat hic eligendi assumenda. Odit velit quibusdam provident, voluptates, doloribus sequi neque ex vitae illo reiciendis laboriosam.
+                    </p>
+                    <div class="ratings">
+                        &#9733;&#9733;&#9733;&#9733;&#9734;
+                    </div>
+                    <img src="https://thumbs.dreamstime.com/b/print-194754999.jpg"/>
+                    <h3>USER 3</h3>
+                </div>  
+            </div>
+        </div>
+    </div>
+<!-- ----------------- -->
+<div class="brands">
+    <div class="container2">
+        <div class="row">
+            <div class="col5">
+                <img src="image/logo-godrej.png"/>
+            </div>
+            <div class="col5">
+                <img src="image/logo-coca-cola.png"/>
+            </div>
+            <div class="col5">
+                <img src="image/logo-oppo.png"/>
+            </div>
+            <div class="col5">
+                <img src="image/logo-paypal.png"/>
+            </div>
+            <div class="col5">
+                <img src="image/logo-philips.png"/>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- -->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col2">
+                <div class="footer_col1">
+                    <h3>Download Our App</h3>
+                    <p class="footer_p">Download it for Android and ios mobiles</p>
+                    <div class="footer_imgs">
+                        <img src="image/play-store.png"/>
+                        <img src="image/app-store.png"/>
+                    </div>
+                </div>
+            </div>   
+            <div class="col2">
+                <div class="footer_col2">
+                    <img src="https://img.freepik.com/free-vector/detailed-click-collect-sign_23-2148779338.jpg?size=626&ext=jpg&ga=GA1.1.722275616.1686367207&semt=ais" />
+                    <p class="footer_p">Our purpose is to have an online store that provides 24/7 access to your around the world so everyone customer can purchase products anytime they want.</p>
+                </div>
+            </div>
+            <div class="col2">
+                <div class="footer_col3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Posts</li>
+                        <li>Return Policy</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <hr>
+</div>
+
+
+<script>
+    var menu_items = document.getElementById("Menu_items");
+    menu_items.style.maxHeight = "0px";
+
+    function show_menu(){
+        if(menu_items.style.maxHeight=="0px")
+        {
+            menu_items.style.maxHeight="200px";
+        }
+        else{
+            menu_items.style.maxHeight="0px";
+        }
+    }
+</script>
+
+<script>
+//scroll smooth
+$(document).ready(function(){
+      // Add smooth scrolling to all links
+      $("#explore").on('click', function(event) {
+    
+        if (this.hash !== "") {
+          event.preventDefault();
+    
+          // Store hash
+          var hash = this.hash;
+    
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+       
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        }
+      });
+    });
+
+    //details of category
+$(document).ready(function() {
+    $('#category1').click(function() {
+        $(this).hide();
+        $('#hidden1').show();
+  });
+
+  $('#hidden1').click(function() {
+    $(this).hide();
+    $('#category1').show();
+  });
+});
+
+//buy btn
+$(document).ready(function(){
+    $(".buybtn").click(function(){
+        $("#details").toggle();
+
+          });
+    });
+
+</script>
+
+</body>
+</html>

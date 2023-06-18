@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Online_Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+        <div class="container">
+            <div  class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="https://img.freepik.com/free-vector/detailed-click-collect-sign_23-2148779338.jpg?size=626&ext=jpg&ga=GA1.1.722275616.1686367207&semt=ais" width="100px"/>
+                    </a>
+                     </div>
+                <nav>
+                    <ul id="Menu_items">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="order.html">Orders</a></li>
+                        <!--<li><a href="">Contact</a></li>-->
+                        <li><a href="account.html">Account</a></li>
+                    </ul>
+                </nav>
+                <a href="cart.html">
+                    <img src="image/cart.png" width="30px" height="30px"/>
+                </a>
+                <img src="image/menu.png" class="menu-icon" onclick="show_menu()"/>
+            </div>
+            </div>
+        </div>
+    
+<!-- ---------------  -->
+
+<div class="container2 mycart">
+    <table >
+        <tr>
+            <th>Product </th>
+            <th>Quantity</th>
+            <th>Total</th>
+        </tr>
+        <tr>
+            <td>
+                <div class="cart_info">
+                    <img src="image/buy-1.jpg"/>
+                    <div>
+                        <p>Red Printed Shirt</p>
+                        <small>Price : $40.00</small>
+                        <br>
+                        <a href="" class="removeLink">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1"></td>
+            <td>$40.00</td>
+        </tr>
+        <tr>
+            <td>
+                <div class="cart_info">
+                    <img src="image/buy-2.jpg"/>
+                    <div>
+                        <p>HRX Men Black Shoes</p>
+                        <small>Price : $60.00</small>
+                        <br>
+                        <a href="" class="removeLink">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1"></td>
+            <td>$60.00</td>
+        </tr>
+        <tr>
+            <td>
+                <div class="cart_info">
+                    <img src="image/buy-3.jpg"/>
+                    <div>
+                        <p>Men Gray Colored Jogger</p>
+                        <small>Price : $40.00</small>
+                        <br>
+                        <a href="" class="removeLink">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1"></td>
+            <td>$40.00</td>
+        </tr>
+    </table>
+    <br><br><br><br>
+ <!--
+    <div class="total_price">
+        <table>
+            <tr>
+                <td>Total</td>
+                <td>$140.00</td>
+            </tr>
+            <tr>
+                <td>Taxes</td>
+                <td>$40.00</td>
+            </tr>
+            <tr>
+                <td>Grand Total</td>
+                <td>$180.00</td>
+            </tr>
+        </table>
+
+    </div>
+   
+</div>
+-->
+<!-- ------------------- -->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col2">
+                <div class="footer_col1">
+                    <h3>Download Our App</h3>
+                    <p class="footer_p">Download it for Android and ios mobiles</p>
+                    <div class="footer_imgs">
+                        <img src="image/play-store.png"/>
+                        <img src="image/app-store.png"/>
+                    </div>
+                </div>
+            </div>   
+            <div class="col2">
+                <div class="footer_col2">
+                    <img src="https://img.freepik.com/free-vector/detailed-click-collect-sign_23-2148779338.jpg?size=626&ext=jpg&ga=GA1.1.722275616.1686367207&semt=ais" />
+                    <p class="footer_p">Our purpose is to have an online store that provides 24/7 access to your around the world so everyone customer can purchase products anytime they want.</p>
+                </div>
+            </div>
+            <div class="col2">
+                <div class="footer_col3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Posts</li>
+                        <li>Return Policy</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <hr>
+</div>
+
+<script>
+    var menu_items = document.getElementById("Menu_items");
+    menu_items.style.maxHeight = "0px";
+
+    function show_menu(){
+        if(menu_items.style.maxHeight=="0px")
+        {
+            menu_items.style.maxHeight="200px";
+        }
+        else{
+            menu_items.style.maxHeight="0px";
+        }
+    }
+
+  /*  $(document).ready(function() {
+  // Retrieve the product information from localStorage
+  var product = JSON.parse(localStorage.getItem("product"));
+
+  if (product) {
+    // Create a new row for the product in the cart table
+    var newRow = $("<tr>");
+    var productCell = $("<td>").html("<div class='cart_info'><img src='image/buy-1.jpg'/><div><p>" + product.name + "</p><small>" + product.price + "</small><br><a href=''>Remove</a></div></div>");
+    var quantityCell = $("<td>").html("<input type='number' value='" + product.quantity + "'>");
+    var totalCell = $("<td>").text("$" + (parseFloat(product.price.replace("$", "")) * parseInt(product.quantity)).toFixed(2));
+
+    newRow.append(productCell, quantityCell, totalCell);
+    $("#cartTable").append(newRow);
+  }
+
+  // Clear the product information from localStorage
+  localStorage.removeItem("product");
+});
+*/
+
+
+var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+// Iterate over the cartItems and generate table rows
+var table = document.querySelector('table');
+cartItems.forEach(function (item) {
+  var newRow = table.insertRow();
+
+  var cell1 = newRow.insertCell(0);
+  var cell2 = newRow.insertCell(1);
+  var cell3 = newRow.insertCell(2);
+
+  cell1.innerHTML = '<div class="cart_info"><img src="' + item.image + '"/><div><p>' + item.name + '</p><small>Price: ' + item.price + '</small><br><a href="" class="removeLink">Remove</a></div></div>';
+  
+  /*var quantityInput = document.createElement('input');
+  quantityInput.type = 'number';
+  quantityInput.value = item.quantity;
+  quantityInput.addEventListener('input', function () {
+    updateTotal(this);
+  });*/
+
+  cell2.innerHTML = '<input type="number" value="' + item.quantity + '">';
+  cell3.innerHTML = item.price;
+  
+});
+
+var removeLinks = document.getElementsByClassName('removeLink');
+  for (var i = 0; i < removeLinks.length; i++) {
+    removeLinks[i].addEventListener('click', function (event) {
+      event.preventDefault(); // Prevent the default link behavior
+
+      // Get the parent row and remove it
+      var row = this.closest('tr');
+      row.parentNode.removeChild(row);
+    });
+  }
+ /* 
+  function updateTotal(input) {
+  var row = input.parentNode.parentNode;
+  var priceCell = row.cells[2];
+  var price = parseFloat(priceCell.innerHTML.slice(1)); // Remove the dollar sign and convert to float
+  var quantity = parseInt(input.value);
+  var total = price * quantity;
+
+  priceCell.innerHTML = '$' + total.toFixed(2); // Update the total with the new quantity
+}*/
+
+  localStorage.clear();
+</script>
+
+
+</body>
+</html>

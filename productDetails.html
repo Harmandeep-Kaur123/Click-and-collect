@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Online_Store</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+</head>
+<body>
+        <div class="container">
+            <div  class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="https://img.freepik.com/free-vector/detailed-click-collect-sign_23-2148779338.jpg?size=626&ext=jpg&ga=GA1.1.722275616.1686367207&semt=ais" width="100px"/>
+                    </a>
+                     </div>
+                <nav>
+                    <ul id="Menu_items">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="order.html">Orders</a></li>
+                        <!--<li><a href="">Contact</a></li>-->
+                        <li><a href="account.html">Account</a></li>
+                    </ul>
+                </nav>
+                <a href="cart.html">
+                    <img src="image/cart.png" width="30px" height="30px"/>
+                </a>
+                <img src="image/menu.png" class="menu-icon" onclick="show_menu()"/>
+            </div>
+        </div>
+    
+<!-- ---------------  -->
+    <div class="container2 one_product">
+        <div class="row">
+            <div class="col">
+                <img src="image/gallery-1.jpg" alt=""/>
+                <div class="small-row">
+                    <div class="small-img">
+                        <img src="image/gallery-2.jpg" width="100%"/>
+                        <img src="image/gallery-3.jpg" width="100%"/>
+                        <img src="image/gallery-4.jpg" width="100%"/>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <p>Home / T-Shirt</p>
+                <h1>Red Printed T-shirt</h1>
+                <h2>By HRX</h2>
+                <h4>$40.00</h4>
+                <select>
+                    <option>Select Size</option>
+                    <option>XXL</option>
+                    <option>XL</option>
+                    <option>L</option>
+                    <option>M</option>
+                    <option>S</option>
+                    <option>XS</option>
+                </select>
+                <br>
+                <input type="number" value="1">
+                <a href="#" class="button addBtn"  onclick="addToCart()">Add to Cart</a>
+
+                <h3>Product Details</h3>
+                <br>
+                <p>Give your summer wardrobe a style upgade with HRX Men's T-shirt.<br>
+                Red-colored-printed in cotton stuff</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container2">
+        <div class="row row2">
+            <h2>Related Products</h2>
+            <p> View More</p>
+        </div>
+
+    </div>
+
+    <div class="container2">
+        <div class="row row2">
+        </div>
+        <div class="row">
+            <div class="col2">
+                <img src="image/product-5.jpg"/>
+                <h4>Gray Sneakers</h4>
+                <p>$40.00</p>
+                <div class="ratings">
+                    &#9733;&#9733;&#9733;&#9733;&#9734;
+                </div>
+            </div>
+            <div class="col2">
+                <img src="image/product-2.jpg"/>
+                <h4>HRX Black Shoes</h4>
+                <p>$60.00</p>
+                <div class="ratings">
+                    &#9733;&#9733;&#9733;&#9733;&#9734;
+                </div>
+            </div>
+            <div class="col2">
+                <img src="image/product-3.jpg"/>
+                <h4>Gray Jogger</h4>
+                <p>$65.00</p>
+                <div class="ratings">
+                    &#9733;&#9733;&#9733;&#9734;&#9734;
+                </div>
+            </div>
+            <div class="col2">
+                <img src="image/product-4.jpg"/>
+                <h4>Solid Blue T-shirt</h4>
+                <p>$50.00</p>
+                <div class="ratings">
+                    &#9733;&#9733;&#9733;&#9733;&#9734;
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+<!-- -->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col2">
+                <div class="footer_col1">
+                    <h3>Download Our App</h3>
+                    <p class="footer_p">Download it for Android and ios mobiles</p>
+                    <div class="footer_imgs">
+                        <img src="image/play-store.png"/>
+                        <img src="image/app-store.png"/>
+                    </div>
+                </div>
+            </div>   
+            <div class="col2">
+                <div class="footer_col2">
+                    <img src="https://img.freepik.com/free-vector/detailed-click-collect-sign_23-2148779338.jpg?size=626&ext=jpg&ga=GA1.1.722275616.1686367207&semt=ais" />
+                    <p class="footer_p">Our purpose is to have an online store that provides 24/7 access to your around the world so everyone customer can purchase products anytime they want.</p>
+                </div>
+            </div>
+            <div class="col2">
+                <div class="footer_col3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Posts</li>
+                        <li>Return Policy</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <hr>
+</div>
+
+<script>
+    var menu_items = document.getElementById("Menu_items");
+    menu_items.style.maxHeight = "0px";
+
+    function show_menu(){
+        if(menu_items.style.maxHeight=="0px")
+        {
+            menu_items.style.maxHeight="200px";
+        }
+        else{
+            menu_items.style.maxHeight="0px";
+        }
+    }
+
+ /*   $(document).ready(function() {
+  $(".button").click(function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Get the product information from the clicked button's parent container
+    var productContainer = $(this).closest(".one_product");
+    var productName = productContainer.find("h1").text();
+    var productPrice = productContainer.find("h4").text();
+    var productQuantity = productContainer.find("input[type='number']").val();
+
+    // Create an object to store the product information
+    var product = {
+      name: productName,
+      quantity: productQuantity,
+      price: productPrice
+      
+    };
+
+    // Store the product information in localStorage
+    localStorage.setItem("product", JSON.stringify(product));
+
+    // Redirect to the cart.html file
+    window.location.href = "cart.html";
+  });
+});*/
+
+function addToCart() {
+    // Extract necessary information
+    var image = document.querySelector('.col img').getAttribute('src');
+    var name = document.querySelector('.col h1').textContent;
+    var price = document.querySelector('.col h4').textContent;
+    var quantity = document.querySelector('.col input[type="number"]').value;
+
+    // Create an object to store the cart item details
+    var cartItem = {
+      image: image,
+      name: name,
+      price: price,
+      quantity: quantity
+    };
+
+    // Check if cartItems already exist in localStorage
+    var cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+    // Add the new item to the cartItems array
+    cartItems.push(cartItem);
+
+    // Save the updated cartItems array to localStorage
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    
+    //window.location.href = "cart.html";
+  }
+</script>
+
+
+</body>
+</html>

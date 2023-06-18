@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORDERS - Online_Store</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+        <div class="container">
+            <div  class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="https://img.freepik.com/free-vector/detailed-click-collect-sign_23-2148779338.jpg?size=626&ext=jpg&ga=GA1.1.722275616.1686367207&semt=ais" width="100px"/>
+                    </a>
+                     </div>
+                <nav>
+                    <ul id="Menu_items">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="order.html">Orders</a></li>
+                        <!--<li><a href="">Contact</a></li>-->
+                        <li><a href="account.html">Account</a></li>
+                    </ul>
+                </nav>
+                <a href="cart.html">
+                    <img src="image/cart.png" width="30px" height="30px"/>
+                </a>
+                <img src="image/menu.png" class="menu-icon" onclick="show_menu()"/>
+            </div>
+            </div>
+        </div>
+    
+<!-- ---------------  -->
+
+<div class="container2 order">
+    <table>
+        <tr>
+            <th>Product </th>
+            <th>Quantity</th>
+            <th>Status</th>
+        </tr>
+        <tr>
+            <td>
+                <div class="order_info">
+                    <img src="image/buy-1.jpg" />
+                    <div>
+                        <p>Red Printed Shirt</p>
+                        <br>
+                    </div>
+                </div>
+            </td>
+            <td>1</td>
+            <td>Delivered
+                <br><button class="button statusBtn">Check status</button>
+                <div id="sts1" style="display: none;">
+                    <!-- Status information goes here -->
+                    <p>ORDER 1
+                        <br>Order Delivered: 12-06-2023
+                    </p>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="order_info">
+                    <img src="image/buy-2.jpg" />
+                    <div>
+                        <p>Black Shoes</p>
+                        <br>
+                    </div>
+                </div>
+            </td>
+            <td>2</td>
+            <td>Preparing to Dispatch
+                <br><button class="button statusBtn2">Check status</button>
+                <div id="sts2" style="display: none;">
+                    <!-- Status information goes here -->
+                    <p>ORDER 2
+                        <br>
+                        </p>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="order_info">
+                    <img src="image/buy-3.jpg" />
+                    <div>
+                        <p>Jogger</p>
+                        <br>
+                    </div>
+                </div>
+            </td>
+            <td>1</td>
+            <td>Out for delivery <br>
+                <button class="button statusBtn3">Check status</button>
+                <div id="sts3" style="display: none;">
+                    <!-- Status information goes here -->
+                    <p>ORDER 3
+                    <br>Expected Delivery: Tomorrow
+                    </p>
+                </div>
+            </td>
+        </tr>
+    </table>
+    
+<!-- ------------------- -->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col2">
+                <div class="footer_col1">
+                    <h3>Download Our App</h3>
+                    <p class="footer_p">Download it for Android and ios mobiles</p>
+                    <div class="footer_imgs">
+                        <img src="image/play-store.png"/>
+                        <img src="image/app-store.png"/>
+                    </div>
+                </div>
+            </div>   
+            <div class="col2">
+                <div class="footer_col2">
+                    <img src="https://img.freepik.com/free-vector/detailed-click-collect-sign_23-2148779338.jpg?size=626&ext=jpg&ga=GA1.1.722275616.1686367207&semt=ais" />
+                    <p class="footer_p">Our purpose is to have an online store that provides 24/7 access to your around the world so everyone customer can purchase products anytime they want.</p>
+                </div>
+            </div>
+            <div class="col2">
+                <div class="footer_col3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Posts</li>
+                        <li>Return Policy</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <hr>
+</div>
+<script>
+    var menu_items = document.getElementById("Menu_items");
+        menu_items.style.maxHeight = "0px";
+    
+        function show_menu(){
+            if(menu_items.style.maxHeight=="0px")
+            {
+                menu_items.style.maxHeight="200px";
+            }
+            else{
+                menu_items.style.maxHeight="0px";
+            }
+        }
+//------------------------------
+      var currentDate = new Date();
+      var day = currentDate.getDate();
+      var month = currentDate.getMonth() + 1; 
+      var year = currentDate.getFullYear();
+
+      var dateText2 ="Preparing For dispatch:  " + month + "/" + day + "/" + year;
+
+      var dateDisplay2 = document.getElementById("sts2");
+      dateDisplay2.innerHTML = dateText2;
+
+//------------------------         
+        $(document).ready(function(){
+          $(".statusBtn").click(function(){
+            $("#sts1").toggle();
+          });
+        });
+        $(document).ready(function(){
+          $(".statusBtn2").click(function(){
+            $("#sts2").toggle();
+          });
+        });
+        $(document).ready(function(){
+          $(".statusBtn3").click(function(){
+            $("#sts3").toggle();
+          });
+        });
+//-------------------
+$(document).ready(function() {
+  $("img").click(function() {
+    $(this).toggleClass("scaled");
+  });
+});
+
+/*.scaled {
+  width: 200px;
+  height: 200px;
+}
+*/
+</script>
+</body>
+</html>

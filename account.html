@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN - Online_Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+</head>
+<body>
+        <div class="container">
+            <div  class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="https://img.freepik.com/free-vector/detailed-click-collect-sign_23-2148779338.jpg?size=626&ext=jpg&ga=GA1.1.722275616.1686367207&semt=ais" width="100px"/>
+                    </a>
+                     </div>
+                <nav>
+                    <ul id="Menu_items">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="order.html">Orders</a></li>
+                        <!--<li><a href="">Contact</a></li>-->
+                        <li><a href="account.html">Account</a></li>
+                    </ul>
+                </nav>
+                <a href="cart.html">
+                    <img src="image/cart.png" width="30px" height="30px"/>
+                </a>
+                <img src="image/menu.png" class="menu-icon" onclick="show_menu()"/>
+            </div>
+            </div>
+        </div>
+    
+<!-- ---------------  -->
+
+<div class="account_page">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <img src="https://www.pngmart.com/files/11/Online-Portal-E-Commerce-PNG-Clipart.png" alt="" width="100%">
+            </div>
+            <div class="col">
+                <div class="forms">
+                    <div class="form-btn">
+                        <span onclick="login()">Login</span>
+                        <span onclick="signup()">Sign Up</span>
+                        <hr id="indicator">
+                    </div>   
+                <form id="form1">
+                    <input type="text" placeholder="Username">
+                    <input type="password" placeholder="Your password">
+                    <button type="submit" class="button">Login</button>
+                    <a href=""> Forgot password??</a>
+                </form>
+                <form id="form2">
+                    <input type="text" placeholder="Username">
+                    <input type="email" placeholder="Email">
+                    <input type="password" placeholder="Your password">
+                    <button type="submit" class="button">Sign Up</button>
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<!-- ------------------- -->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col2">
+                <div class="footer_col1">
+                    <h3>Download Our App</h3>
+                    <p class="footer_p">Download it for Android and ios mobiles</p>
+                    <div class="footer_imgs">
+                        <img src="image/play-store.png"/>
+                        <img src="image/app-store.png"/>
+                    </div>
+                </div>
+            </div>   
+            <div class="col2">
+                <div class="footer_col2">
+                    <img src="https://img.freepik.com/free-vector/detailed-click-collect-sign_23-2148779338.jpg?size=626&ext=jpg&ga=GA1.1.722275616.1686367207&semt=ais" />
+                    <p class="footer_p">Our purpose is to have an online store that provides 24/7 access to your around the world so everyone customer can purchase products anytime they want.</p>
+                </div>
+            </div>
+            <div class="col2">
+                <div class="footer_col3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Posts</li>
+                        <li>Return Policy</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <hr>
+</div>
+
+<script>
+    var menu_items = document.getElementById("Menu_items");
+    menu_items.style.maxHeight = "0px";
+
+    function show_menu(){
+        if(menu_items.style.maxHeight=="0px")
+        {
+            menu_items.style.maxHeight="200px";
+        }
+        else{
+            menu_items.style.maxHeight="0px";
+        }
+    }
+</script>
+
+<script>
+    var form1=document.getElementById("form1");
+    var form2=document.getElementById("form2");
+    var indicator=document.getElementById("indicator")
+
+    function login(){
+        form1.style.transform="translateX(300px)";
+        form2.style.transform="translateX(300px)";
+        indicator.style.transform="translate(0px)";
+    }
+
+    function signup(){
+        form1.style.transform="translateX(0px)";
+        form2.style.transform="translateX(0px)";
+        indicator.style.transform="translate(100px)";
+    }
+</script>
+
+
+</body>
+</html>
