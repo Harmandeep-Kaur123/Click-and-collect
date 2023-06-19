@@ -68,8 +68,31 @@
                 <br>
                 <p>Give your summer wardrobe a style upgade with HRX Men's T-shirt.<br>
                 Red-colored-printed in cotton stuff</p>
+                <h3>Add Review</h3>
+                <form>
+                    <input type="text" id="reviewName" placeholder="Your Name here" style="width: 250px; border:1px solid black;">
+                    <br>
+                  <textarea id="reviewText" rows="4" cols="50"></textarea>
+                  <br>
+                  <button type="button" class="button addReviewBtn">Submit Review</button>
+                </form>
             </div>
         </div>
+    </div>
+    <div class="reviews" id="review">
+        <table class="reviews-table">
+            <thead>
+              <tr>
+                <th>Serial No.</th>
+                <th>Name</th>
+                <th>Review</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Reviews will be dynamically added here -->
+            </tbody>
+          </table>
     </div>
 
     <div class="container2">
@@ -220,10 +243,48 @@ function addToCart() {
     // Save the updated cartItems array to localStorage
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
     
-    //window.location.href = "cart.html";
+    window.location.href = "cart.html";
   }
-</script>
 
+</script>
+<script>
+$(document).ready(function() {
+  var reviewCount = 0; // Counter for the serial number
+  
+  function addReview() {
+    var reviewName = $('#reviewName').val();
+    var reviewText = $('#reviewText').val();
+    var reviewDate = new Date().toLocaleDateString();
+    
+    // Increment the serial number counter
+    reviewCount++;
+    
+    // Create a new table row for the review
+    var newRow = $('<tr></tr>');
+    var serialNumberCell = $('<td></td>').text(reviewCount);
+    var reviewNameCell = $('<td></td>').text(reviewName);
+    var reviewTextCell = $('<td></td>').text(reviewText);
+    var reviewDateCell = $('<td></td>').text(reviewDate);
+    
+    newRow.append(serialNumberCell);
+    newRow.append(reviewNameCell);
+    newRow.append(reviewTextCell);
+    newRow.append(reviewDateCell);
+    
+    // Add the new row to the reviews table
+    $('.reviews-table tbody').append(newRow);
+    
+    // Clear the input fields after adding the review
+    $('#reviewName').val('');
+    $('#reviewText').val('');
+  }
+  
+  // Trigger the addReview function on button click
+  $('.addReviewBtn').click(function() {
+    addReview();
+  });
+});
+</script>
 
 </body>
 </html>
